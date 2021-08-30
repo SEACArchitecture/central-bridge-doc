@@ -1,0 +1,10 @@
+description: A representation of a dog
+allOf:
+  - $ref: ./WebhookBody.yaml
+  - type: object
+    properties:
+      CurrencyName:
+        type: string
+        example: THB
+    required:
+      - CurrencyName

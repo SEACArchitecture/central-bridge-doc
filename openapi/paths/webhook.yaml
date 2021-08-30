@@ -1,0 +1,14 @@
+post:
+  tags:
+    - Webhook
+  summary: Product Master
+  description: Information about a product master
+  operationId: webhook
+  requestBody:
+    content:
+      application/json:
+        schema:
+          $ref: ../components/schemas/WebhookBody.yaml
+  responses:
+    "200":
+      description: Return a 200 status to indicate that the data was received successfully

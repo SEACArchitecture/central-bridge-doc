@@ -1,0 +1,12 @@
+type: object
+required:
+  - kind
+discriminator:
+  propertyName: kind
+  mapping:
+    sku: ./SKU.yaml
+    currency: ./Currency.yaml
+properties:
+  kind:
+    description: Type of a pet
+    type: string

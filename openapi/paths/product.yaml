@@ -1,0 +1,6 @@
+get:
+  tags:
+    - Product Master
+  summary: List of Product Master
+  description: Returns a list of product master by filter
+  operationId: getProductMasters

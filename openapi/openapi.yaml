@@ -2,15 +2,15 @@ openapi: 3.0.2
 info:
   version: 1.0.0
   title: Example.com
-  termsOfService: 'https://example.com/terms/'
+  termsOfService: "https://example.com/terms/"
   contact:
     email: contact@example.com
-    url: 'http://example.com/contact'
+    url: "http://example.com/contact"
   license:
     name: Apache 2.0
-    url: 'http://www.apache.org/licenses/LICENSE-2.0.html'
+    url: "http://www.apache.org/licenses/LICENSE-2.0.html"
   x-logo:
-    url: 'https://redocly.github.io/openapi-template/logo.png'
+    url: "./SEAC.png"
   description: >
     This is an **example** API to demonstrate features of OpenAPI specification
 
@@ -51,30 +51,48 @@ info:
     guesswork in calling the service.
 externalDocs:
   description: Find out how to create a GitHub repo for your OpenAPI definition.
-  url: 'https://github.com/Rebilly/generator-openapi-repo'
+  url: "https://github.com/Rebilly/generator-openapi-repo"
 tags:
-  - name: Echo
-    description: Example echo operations
-  - name: User
-    description: Operations about user
+  # - name: Echo
+  #   description: Example echo operations
+  # - name: User
+  #   description: Operations about user
+  - name: Product Master
+    description: Information of Product Master
+  - name: Coupon Master
+    description: Information of Coupon Master
+  - name: Webhook
+    description: Receive real-time data from AR modules
+x-tagGroups:
+  - name: General
+    tags:
+      - Product Master
+      - Coupon Master
+      - Webhook
 servers:
-  - url: 'http://example.com/api/v1'
-  - url: 'https://example.com/api/v1'
+  - url: "http://example.com/api/v1"
+  - url: "https://example.com/api/v1"
 paths:
-  '/users/{username}':
-    $ref: 'paths/users@{username}.yaml'
-  /echo:
-    $ref: paths/echo.yaml
+  # "/users/{username}":
+  #   $ref: "paths/users@{username}.yaml"
+  # /echo:
+  #   $ref: paths/echo.yaml
+  /coupon:
+    $ref: paths/coupon.yaml
+  /product:
+    $ref: paths/product.yaml
+  /webhook:
+    $ref: paths/webhook.yaml
 components:
   securitySchemes:
     main_auth:
       type: oauth2
       flows:
         implicit:
-          authorizationUrl: 'http://example.com/api/oauth/dialog'
+          authorizationUrl: "http://example.com/api/oauth/dialog"
           scopes:
-            'read:users': read users info
-            'write:users': modify or remove users
+            "read:users": read users info
+            "write:users": modify or remove users
     api_key:
       type: apiKey
       in: header
