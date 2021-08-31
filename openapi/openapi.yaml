@@ -66,9 +66,11 @@ tags:
 x-tagGroups:
   - name: General
     tags:
+      - Webhook
+  - name: AR API
+    tags:
       - Product Master
       - Coupon Master
-      - Webhook
 servers:
   - url: "http://example.com/api/v1"
   - url: "https://example.com/api/v1"
