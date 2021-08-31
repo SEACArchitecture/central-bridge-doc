@@ -4,5 +4,12 @@ get:
   summary: Get Product Master by SKU
   description: Returns information of product master
   operationId: getProductMasterBySKU
+  parameters:
+    - name: sku
+      in: path
+      description: SKU of product master that needs to be fetched
+      required: true
+      schema:
+        type: string
   security:
     - api_key: []

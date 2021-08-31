@@ -4,5 +4,22 @@ get:
   summary: List of Coupon Master
   description: Returns a list of coupon master by filter
   operationId: getCouponMasters
+  parameters:
+    - name: skip
+      in: query
+      description: Limit number of return items
+      required: false
+      style: form
+      schema:
+        type: integer
+        format: int64
+    - name: limit
+      in: query
+      description: Limit number of return items
+      required: false
+      style: form
+      schema:
+        type: integer
+        format: int64
   security:
     - api_key: []

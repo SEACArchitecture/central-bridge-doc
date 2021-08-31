@@ -4,5 +4,12 @@ get:
   summary: Get Coupon Master by id
   description: Returns information of coupon master
   operationId: getCouponMasterById
+  parameters:
+    - name: id
+      in: path
+      description: ID of coupon master that needs to be fetched
+      required: true
+      schema:
+        type: string
   security:
     - api_key: []
