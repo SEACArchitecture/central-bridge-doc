@@ -72,8 +72,10 @@ x-tagGroups:
       - Product Master
       - Coupon Master
 servers:
-  - url: "http://example.com/api/v1"
-  - url: "https://example.com/api/v1"
+  - url: "http://central-dev.seac.com/api/v1"
+    description: Central dev server
+  - url: "http://ar-dev.seac.com/api/v1"
+    description: AR dev server
 paths:
   # "/users/{username}":
   #   $ref: "paths/users@{username}.yaml"
