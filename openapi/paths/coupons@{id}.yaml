@@ -4,3 +4,5 @@ get:
   summary: Get Coupon Master by id
   description: Returns information of coupon master
   operationId: getCouponMasterById
+  security:
+    - api_key: []

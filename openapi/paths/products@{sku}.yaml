@@ -4,3 +4,5 @@ get:
   summary: Get Product Master by SKU
   description: Returns information of product master
   operationId: getProductMasterBySKU
+  security:
+    - api_key: []

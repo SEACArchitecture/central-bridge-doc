@@ -4,3 +4,5 @@ post:
   summary: Reserve a slot
   description: Reserve a slot
   operationId: reserveCouponSlot
+  security:
+    - api_key: []

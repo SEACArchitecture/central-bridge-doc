@@ -4,3 +4,5 @@ get:
   summary: List of Coupon Master
   description: Returns a list of coupon master by filter
   operationId: getCouponMasters
+  security:
+    - api_key: []
