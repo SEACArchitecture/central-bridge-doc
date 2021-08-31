@@ -2,7 +2,7 @@ post:
   tags:
     - Webhook
   summary: Product Master
-  description: Information about a product master
+  description: Webhook for subscribe event of product master
   operationId: webhook
   requestBody:
     content:
