@@ -10,5 +10,5 @@ discriminator:
     productGroup: ./ProductGroup.yaml
 properties:
   kind:
-    description: Type of a pet
+    description: Type of an event
     type: string
