@@ -3,14 +3,83 @@ allOf:
   - $ref: ./WebhookBody.yaml
   - type: object
     properties:
+      SKUCode:
+        type: string
+        example: "YNU-1"
       SKUName:
         type: string
         example: "YourNextU Test SKU"
-      packSize:
-        type: integer
-        format: int32
-        description: The size of the pack the dog is from
-        default: 1
-        minimum: 1
+      SKUPricing:
+        type: string
+        example: "100.00"
+      ProductAvailability:
+        type: string
+        enum:
+          - Available
+          - UnAvailable
+        example: "Available"
+      EligibleCountry:
+        type: string
+        example: "TH"
+      SubProductGroupName:
+        type: string
+        example: "Product Group 1"
+      SKUGroupName:
+        type: string
+        example: "SKU Group 1"
+      CurrencyName:
+        type: string
+        example: "THB"
+      UOMName:
+        type: string
+        example: "Pax"
+      PartnerName:
+        type: string
+        example: "YourNextU Partner"
+      DeliveryFormat:
+        type: string
+        example: "Full Access"
+      RevenueType:
+        type: string
+        example: "Full Access"
+      ThirdPartyLicenseFee:
+        type: string
+        example: "License"
+      ShelfLife:
+        type: string
+        example: "Regular"
+      StandardCost:
+        type: string
+        example: "50.0"
+      PackageDay:
+        type: string
+        example: "1.0"
+      UnitperSKU:
+        type: string
+        example: "1"
+      StatusCode:
+        type: string
+        enum:
+          - Active
+          - InActive
+        example: "Active"
+
     required:
+      - SKUCode
       - SKUName
+      - SKUPricing
+      - ProductAvailability
+      - EligibleCountry
+      - SubProductGroupName
+      - SKUGroupName
+      - CurrencyName
+      - UOMName
+      - PartnerName
+      - DeliveryFormat
+      - RevenueType
+      - ThirdPartyLicenseFee
+      - ShelfLife
+      - StandardCost
+      - PackageDay
+      - UnitperSKU
+      - StatusCode
