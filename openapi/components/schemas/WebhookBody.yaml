@@ -6,6 +6,8 @@ discriminator:
   mapping:
     sku: ./SKU.yaml
     currency: ./Currency.yaml
+    partner: ./Partner.yaml
+    productGroup: ./ProductGroup.yaml
 properties:
   kind:
     description: Type of a pet

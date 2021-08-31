@@ -1,0 +1,6 @@
+get:
+  tags:
+    - Product Master
+  summary: Get Product Master by SKU
+  description: Returns information of product master
+  operationId: getProductMasterBySKU

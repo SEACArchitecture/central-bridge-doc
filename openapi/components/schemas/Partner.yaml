@@ -1,0 +1,21 @@
+description: A representation of a dog
+allOf:
+  - $ref: ./WebhookBody.yaml
+  - type: object
+    properties:
+      PartnerCode:
+        type: string
+        example: "partner-1"
+      PartnerName:
+        type: string
+        example: "Partner 1"
+      StatusCode:
+        type: string
+        enum:
+          - Active
+          - InActive
+        example: "Active"
+    required:
+      - PartnerCode
+      - PartnerName
+      - StatusCode

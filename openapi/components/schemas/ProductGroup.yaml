@@ -1,0 +1,21 @@
+description: A representation of a dog
+allOf:
+  - $ref: ./WebhookBody.yaml
+  - type: object
+    properties:
+      ProductGroupCode:
+        type: string
+        example: "prod-1"
+      ProductGroupName:
+        type: string
+        example: "Prod 1"
+      StatusCode:
+        type: string
+        enum:
+          - Active
+          - InActive
+        example: "Active"
+    required:
+      - ProductGroupCode
+      - ProductGroupName
+      - StatusCode

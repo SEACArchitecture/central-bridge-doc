@@ -1,0 +1,6 @@
+get:
+  tags:
+    - Coupon Master
+  summary: Get Coupon Master by id
+  description: Returns information of coupon master
+  operationId: getCouponMasterById

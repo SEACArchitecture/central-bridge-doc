@@ -1,0 +1,6 @@
+post:
+  tags:
+    - Coupon Master
+  summary: Reserve a slot
+  description: Reserve a slot
+  operationId: reserveCouponSlot

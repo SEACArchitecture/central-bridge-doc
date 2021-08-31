@@ -81,10 +81,16 @@ paths:
   #   $ref: "paths/users@{username}.yaml"
   # /echo:
   #   $ref: paths/echo.yaml
-  /coupon:
-    $ref: paths/coupon.yaml
-  /product:
-    $ref: paths/product.yaml
+  /coupons:
+    $ref: paths/coupons.yaml
+  /coupons/{id}:
+    $ref: paths/coupons@{id}.yaml
+  /coupons/{id}/_reserve:
+    $ref: paths/coupons@{id}@_reserve.yaml
+  /products:
+    $ref: paths/products.yaml
+  /products/{sku}:
+    $ref: paths/products@{sku}.yaml
   /webhook:
     $ref: paths/webhook.yaml
 components:
