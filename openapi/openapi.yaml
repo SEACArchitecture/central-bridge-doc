@@ -38,16 +38,19 @@ tags:
     description: Information of Coupon Master
   - name: Webhook
     description: Receive real-time data from AR modules
+  - name: Connection
+    description: For Testing Connection
 x-tagGroups:
   - name: General
     tags:
+      - Connection
       - Webhook
   - name: AR API
     tags:
       - Product Master
       - Coupon Master
 servers:
-  - url: "http://central-dev.seac.com/api/v1"
+  - url: "https://central-bridge.vercel.app/api/"
     description: Central dev server
   - url: "http://ar-dev.seac.com/api/v1"
     description: AR dev server
@@ -56,6 +59,8 @@ paths:
   #   $ref: "paths/users@{username}.yaml"
   # /echo:
   #   $ref: paths/echo.yaml
+  /ping:
+    $ref: paths/ping.yaml
   /coupons:
     $ref: paths/coupons.yaml
   /coupons/{id}:

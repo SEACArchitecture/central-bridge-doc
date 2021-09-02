@@ -1,0 +1,20 @@
+get:
+  tags:
+    - Connection
+  summary: Ping Pong
+  description: Test Liveness of the service
+  operationId: postPing
+  responses:
+    "200":
+      description: OK
+      content:
+        text/plain:
+          schema:
+            type: string
+          examples:
+            response:
+              value: pong
+    "401":
+      description: Missing/Invalid Token
+  security:
+    - api_key: []
